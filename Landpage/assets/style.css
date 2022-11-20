@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    background-image: url(/Landpage/img/Synthwave_background.png);
+    /* opacity: 0,3; */
+    background-repeat: repeat-x;
+}
+
+h1 h2 h3 {
+    color: chocolate;
+}
+
+p {
+    font-size: 1.1rem; /* alterado o tamanho da fonte pra maior*/
+    color: rgb(22, 21, 21);
+    background: #b7f3f3;
+    padding: 3%;
+}
+
+/* body::-webkit-scrollbar-button {
+    background: magenta;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #cfc;
+}
+
+body::-webkit-scrollbar-track-piece {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: yellowgreen;
+    border-radius: 6px;
+} */
