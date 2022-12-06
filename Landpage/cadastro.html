@@ -8,8 +8,8 @@
     <meta name="description" content="Esta landpage serve para apresentar visualmente o conteudo aprendido durante o Bootcamp"/>
     <link rel="icon" type="image/x-icon" href="./img/back-to-school.png"/>
     <meta name="author" content="Dionei Rogério Lamb" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Cadastro</title>
 
     <style type="text/css">
 
@@ -22,7 +22,7 @@
 
         }
         body{
-            background-image: url(https://img.freepik.com/vetores-gratis/desenhos-animados-da-paisagem-da-noite-da-terra-do-norte-selvagem_1441-3165.jpg?w=740&t=st=1670290379~exp=1670290979~hmac=e00fbc245ca4dcd37cd525db5a2a96b017084fd6f840b0f566c7ccb4b71dcbf0);
+            background-image: url(https://img.freepik.com/vetores-gratis/paisagem-de-montanha-gradiente_23-2149159635.jpg?t=st=1670290329~exp=1670290929~hmac=e7a8a802b2c1484d125586d9385fca43208424497fc95972c56bb5f0adee35b5);
             background-repeat: no-repeat;
             background-size: cover; 
             background-attachment: fixed;
@@ -39,6 +39,7 @@
             padding: 30px;
             border-radius: 4%;
             box-shadow: 3px 3px 1px 0px #00000060;
+            width: 400px;
         }
 
         h1{
@@ -73,7 +74,7 @@
         }
 
         .label-float label{
-            color: #766CC3;
+            color: #511b9f;
             pointer-events: none;
             position: absolute;
             top: 0;
@@ -86,7 +87,7 @@
         .label-float input:valid + label{
          font-size: 13px;   
          margin-top: 0;
-         color: #4038a0;
+         color: #511b9f;
         }
 
         button{
@@ -106,33 +107,10 @@
             color: #fff;
             transition: all .3s ease-out;
         }
-
+        
         .justify-center{
             display: flex;
             justify-content: center;
-        }
-
-        hr{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            /* width: 50%; */
-        }
-
-        p{
-            color: #4038a0;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        a{
-            color: #511b9f;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all .3s ease-out;
-        }
-
-        a:hover{
-            color: #000;
         }
 
         .fa-eye{
@@ -140,16 +118,21 @@
             top: 17px;
             right: 10px;
             cursor: pointer;
-            color: #511b9f;
+            color: #4038a0;
         }
-        
+
     </style>
 
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>Entrar</h1>
+            <h1>Cadastrar</h1>
+
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label for="nome">Nome</label>
+            </div>
 
             <div class="label-float">
                 <input type="text" id="usuario" placeholder="" required>
@@ -159,25 +142,23 @@
             <div class="label-float">
                 <input type="password" id="senha" placeholder="" required>
                 <label for="senha">Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
+                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
             </div>
 
+            <div class="label-float">
+                <input type="password" id="confirmSenha" placeholder="" required>
+                <label for="confirmSenha">Confirmar Senha</label>
+                <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            
             <div class="justify-center">
-                <button>Entrar</button>
+                <button>Cadastrar</button>
             </div>
-
-            <div>
-                <hr>
-            </div>
-
-            <p>
-                Não tem uma conta?
-                <a href="">Cadastre-se</a>
-            </p>
 
         </div>
     </div>
 
-<script src="./scripts.js"></script>
+<script src="./scripts.js"></script>    
 </body>
-</html>                                 
+</html>
