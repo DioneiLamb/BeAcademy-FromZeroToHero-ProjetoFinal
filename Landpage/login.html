@@ -1,183 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta  name="keywords" content="HTML, CSS, JavaScript, Bootcamp, BeAcademy"/>
-    <meta name="description" content="Esta landpage serve para apresentar visualmente o conteudo aprendido durante o Bootcamp"/>
-    <link rel="icon" type="image/x-icon" href="./img/back-to-school.png"/>
-    <meta name="author" content="Dionei Rogério Lamb" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login</title>
-
-    <style type="text/css">
-
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-
-        }
-        body{
-            background-image: url(https://img.freepik.com/vetores-gratis/desenhos-animados-da-paisagem-da-noite-da-terra-do-norte-selvagem_1441-3165.jpg?w=740&t=st=1670290379~exp=1670290979~hmac=e00fbc245ca4dcd37cd525db5a2a96b017084fd6f840b0f566c7ccb4b71dcbf0);
-            background-repeat: no-repeat;
-            background-size: cover; 
-            background-attachment: fixed;
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 100px;
-        }
-    
-        .card{
-            background-color: #ffffff80;
-            padding: 30px;
-            border-radius: 4%;
-            box-shadow: 3px 3px 1px 0px #00000060;
-        }
-
-        h1{
-            text-align: center;
-            margin-bottom: 20px;
-            color: #511b9f;
-        }
-
-        .label-float input{
-            width: 100%;
-            padding:  5px 5px;
-            display: inline-block;
-            border: 0;
-            border-bottom: 2px solid #511b9f;
-            background-color: transparent;
-            outline: none;
-            min-width: 180px;
-            font-size: 16px;
-            transition: all .3s ease-out;
-            border-radius: 0;
-        }
-
-        .label-float{
-            position: relative;
-            padding-top: 13px;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-
-        .label-float input:focus{
-            border-bottom: 2px solid #4038a0;
-        }
-
-        .label-float label{
-            color: #766CC3;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-top: 13px;
-            transition: all .3s ease-out;
-        }
-
-        .label-float input:focus + label,
-        .label-float input:valid + label{
-         font-size: 13px;   
-         margin-top: 0;
-         color: #4038a0;
-        }
-
-        button{
-            background-color: transparent;
-            color: #4038a0;
-            padding: 7px;
-            font-weight: bold;
-            font-size: 12px;
-            width: 50%;
-            border-radius: 25px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        button:hover{
-            background-color: #4038a0;
-            color: #fff;
-            transition: all .3s ease-out;
-        }
-
-        .justify-center{
-            display: flex;
-            justify-content: center;
-        }
-
-        hr{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            /* width: 50%; */
-        }
-
-        p{
-            color: #4038a0;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        a{
-            color: #511b9f;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all .3s ease-out;
-        }
-
-        a:hover{
-            color: #000;
-        }
-
-        .fa-eye{
-            position: absolute;
-            top: 17px;
-            right: 10px;
-            cursor: pointer;
-            color: #511b9f;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bootcamp, BeAcademy"/>
+        <meta name="description" content="tela de loguin dos usuários"/>
+        <meta name="author" content="Dionei Rogério Lamb" />
         
-    </style>
+        <link rel="icon" type="image/x-icon" href="./img/back-to-school.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="./css/style2.css" />
+        
+        <title>Login</title>
+  
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <h1>Entrar</h1>
 
-</head>
-<body>
-    <div class="container">
-        <div class="card">
-            <h1>Entrar</h1>
+                <div class="label-float">
+                    <input type="text" id="usuario" placeholder="" required />
+                    <label for="usuario">Usuário</label>
+                </div>
 
-            <div class="label-float">
-                <input type="text" id="usuario" placeholder="" required>
-                <label for="usuario">Usuário</label>
+                <div class="label-float">
+                    <input type="password" id="senha" placeholder="" required />
+                    <label for="senha">Senha</label>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+
+                <div class="justify-center">
+                    <button>Entrar</button>
+                </div>
+
+                <div>
+                    <hr />
+                </div>
+
+                <p>
+                    Não tem uma conta? <a href="./cadastro.html">Cadastre-se</a>
+                </p>
             </div>
-
-            <div class="label-float">
-                <input type="password" id="senha" placeholder="" required>
-                <label for="senha">Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-
-            <div class="justify-center">
-                <button>Entrar</button>
-            </div>
-
-            <div>
-                <hr>
-            </div>
-
-            <p>
-                Não tem uma conta?
-                <a href="">Cadastre-se</a>
-            </p>
-
         </div>
-    </div>
-
-<script src="./scripts.js"></script>
-</body>
-</html>                                 
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>

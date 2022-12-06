@@ -1,164 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta  name="keywords" content="HTML, CSS, JavaScript, Bootcamp, BeAcademy"/>
-    <meta name="description" content="Esta landpage serve para apresentar visualmente o conteudo aprendido durante o Bootcamp"/>
-    <link rel="icon" type="image/x-icon" href="./img/back-to-school.png"/>
-    <meta name="author" content="Dionei Rogério Lamb" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>Cadastro</title>
-
-    <style type="text/css">
-
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-
-        }
-        body{
-            background-image: url(https://img.freepik.com/vetores-gratis/paisagem-de-montanha-gradiente_23-2149159635.jpg?t=st=1670290329~exp=1670290929~hmac=e7a8a802b2c1484d125586d9385fca43208424497fc95972c56bb5f0adee35b5);
-            background-repeat: no-repeat;
-            background-size: cover; 
-            background-attachment: fixed;
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 100px;
-        }
-    
-        .card{
-            background-color: #ffffff80;
-            padding: 30px;
-            border-radius: 4%;
-            box-shadow: 3px 3px 1px 0px #00000060;
-            width: 400px;
-        }
-
-        h1{
-            text-align: center;
-            margin-bottom: 20px;
-            color: #511b9f;
-        }
-
-        .label-float input{
-            width: 100%;
-            padding:  5px 5px;
-            display: inline-block;
-            border: 0;
-            border-bottom: 2px solid #511b9f;
-            background-color: transparent;
-            outline: none;
-            min-width: 180px;
-            font-size: 16px;
-            transition: all .3s ease-out;
-            border-radius: 0;
-        }
-
-        .label-float{
-            position: relative;
-            padding-top: 13px;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-
-        .label-float input:focus{
-            border-bottom: 2px solid #4038a0;
-        }
-
-        .label-float label{
-            color: #511b9f;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-top: 13px;
-            transition: all .3s ease-out;
-        }
-
-        .label-float input:focus + label,
-        .label-float input:valid + label{
-         font-size: 13px;   
-         margin-top: 0;
-         color: #511b9f;
-        }
-
-        button{
-            background-color: transparent;
-            color: #4038a0;
-            padding: 7px;
-            font-weight: bold;
-            font-size: 12px;
-            width: 50%;
-            border-radius: 25px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        button:hover{
-            background-color: #4038a0;
-            color: #fff;
-            transition: all .3s ease-out;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bootcamp, BeAcademy"/>
+        <meta name="description" content="tela de cadastro de novos usuários"/>
+        <meta name="author" content="Dionei Rogério Lamb" />
         
-        .justify-center{
-            display: flex;
-            justify-content: center;
-        }
+        <link rel="icon" type="image/x-icon" href="./img/back-to-school.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="./css/style2.css" />
+        
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <h1>Cadastrar</h1>
 
-        .fa-eye{
-            position: absolute;
-            top: 17px;
-            right: 10px;
-            cursor: pointer;
-            color: #4038a0;
-        }
+                <div class="label-float">
+                        <input type="text" id="nome" placeholder="" required />
+                        <label id="label_nome" for="nome">Nome</label>
+                    </div>
 
-    </style>
+                    <div class="label-float">
+                        <input type="text" id="usuario" placeholder="" required />
+                        <label id="label_usuario" for="usuario">Usuário</label>
+                    </div>
 
-</head>
-<body>
-    <div class="container">
-        <div class="card">
-            <h1>Cadastrar</h1>
+                    <div class="label-float">
+                        <input type="password" id="v_senha" placeholder="" required />
+                        <label id="v_senha" for="senha">Senha</label>
+                        <i id="ver_senha" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
 
-            <div class="label-float">
-                <input type="text" id="nome" placeholder="" required>
-                <label for="nome">Nome</label>
+                    <div class="label-float">
+                        <input type="password" id="v_conf_senha" placeholder="" required />
+                        <label id="v_conf_senha" for="senha">Confirmar Senha</label>
+                        <i id="ver_confirm_senha" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="justify-center">
+                        <button onclick="cadastrar()" >Cadastrar</button>
+                </div>
             </div>
-
-            <div class="label-float">
-                <input type="text" id="usuario" placeholder="" required>
-                <label for="usuario">Usuário</label>
-            </div>
-
-            <div class="label-float">
-                <input type="password" id="senha" placeholder="" required>
-                <label for="senha">Senha</label>
-                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-
-            <div class="label-float">
-                <input type="password" id="confirmSenha" placeholder="" required>
-                <label for="confirmSenha">Confirmar Senha</label>
-                <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-
-            
-            <div class="justify-center">
-                <button>Cadastrar</button>
-            </div>
-
         </div>
-    </div>
 
-<script src="./scripts.js"></script>    
-</body>
+        <script src="./js/scripts.js"></script>
+    </body>
 </html>
