@@ -22,10 +22,10 @@
     
         .card{
             background-color: #ffffff;
-            width: 300px;
             padding: 30px;
             border-radius: 4%;
             box-shadow: 3px 3px 1px 0px #511b9f;
+            width: 300px;
         }
 
         h1{
@@ -86,12 +86,12 @@
             border-radius: 25px;
             cursor: pointer;
             outline: none;
+            transition: all .4s ease-out;
         }
 
         button:hover{
             background-color: #4038a0;
             color: #fff;
-            transition: all .3s ease-out;
         }
 
         .justify-center{
@@ -128,4 +128,22 @@
             right: 10px;
             cursor: pointer;
             color: #511b9f;
+        }
+
+        #msgError{
+            text-align: center;
+            color: #ff0000;
+            background-color: #ffbbbb;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+          }
+          
+        #msgSuccess{
+            text-align: center;
+            color: #00bb00;
+            background-color: #bbffbe;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
         }
