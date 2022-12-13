@@ -36,30 +36,38 @@ img {
 
 .menu {
     display: flex;
-}
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a {
+    background-color: #e5e5e5;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+  }
 
 .menu li {
     margin-left: 10px;
 }
 
-.menu li a {
-    display: block;
-    padding: 10px;
-    background-color: tomato;
-}
 
-.flex {
+
+/* .flex {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .flex > div {
     flex: 1 1 200px;
     margin: 10px 5px;
-    /* border: 1px solid red; */
-}
+    border: 1px solid red;
+} */
 
 /* css grid1 */
 .grid1 {
@@ -115,6 +123,19 @@ img {
     .grid1 > div:nth-child(n + 6) {
         display: block;
         background-color: tomato;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+      width: 100%;
+    }
+    .menu {
+      display: block;
+      float: left;
     }
   }
 
