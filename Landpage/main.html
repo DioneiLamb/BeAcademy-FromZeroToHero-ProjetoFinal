@@ -5,74 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style3.css">
+    <!-- <link rel="stylesheet" href="./css/style3.css"> -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap");
+
+        @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Raleway:ital,wght@1,100&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100%;
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin-bottom: 100px;
+            background-color: #fff;
+            color: #04AA6D;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 {
+            font-size: 10rem;
+            font-family: 'Germania One', cursive;
+            color : orange;
+            position : relative;
+            top : 150;
+            text-align: center;    
+            text-shadow: 0.08em 0.08em 0em rgba(179, 179, 176, 0.50);
+        }
+        .topo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 1%;
+            align-items: center;
+            background-color: #1d1e20;
+        }
+
+        .topo img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu li {
+            list-style: none;
+            margin-left: 10px;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+            background-color: tomato;
+        }
+
+        .menu li a:hover {
+            display: block;
+            padding: 10px;
+            background-color: #04AA6D;
+        }
+
+        /*------------- parte principal------------- */
+        .container{
+            display: grid;
+            max-width: 100%;
+            grid-template-columns:50% 50%;
+            gap: 5px;            
+            
+        }
+        .container > div:nth-child()
+        .apresentacao{ 
+            grid-area: apresentacao;
+            position: relative;
+            background-color: aqua;
+        }
+        .motivacao{
+            grid-area: motivacao;
+            position: absolute;
+            background-color: royalblue;
+        }
+        .testemunho{
+            grid-area: testemunho;
+            position: relative;
+            background-color: olivedrab;
+        }
+        .rodape{
+            grid-area: testemunho;
+            background-color: silver;
+        }
+        .social{
+            grid-area: social;
+            background-color: silver;
+        }
+
+
+
+    </style>
+
 </head>
 <body>
-    <header class="header">
-        <img src="/Landpage/img/skull-beard.png" alt="Caveira barbuda" title="Logo Skull Bardearia">
-        <nav>
-            <ul class="menu">
-                <li><a href="#">INICIAL</a></li>
-                <li><a href="#">CONTATO</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <h1>CSS Grid</h1>
-    <section class="grid1">
-        <div class="textLeft">
-            
-            <p>Legenda 1 ITEM 1</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla asperiores harum ipsam in quo explicabo, et quaerat itaque quae cum laudantium necessitatibus dolorem dolorum voluptatibus eum consequuntur iure odio repudiandae.</p>
+    <div class="topo">
+        <img src="/Landpage/img/skull-beard.png" alt="Caveira barbuda" title="Logo Skull Bardearia">            
+        <h1>SKULL Barbearia</h1>
+        <ul class="menu">
+            <li><a href="#">INICIAL</a></li>
+            <li><a href="#">CONTATO</a></li>
+        </ul>
+    </div>
+
+    <div class="container" > <!--container pai-->
+        <div class="item apresentacao" >
+            <h2>apresentação</h2>
         </div>
-        <div>
-            <img src="./img/corte2.png" alt="">
-            <p class="legenda">Legenda 2</p>
+        <div class="item motivacao" >
+            <h2>motivação</h2>
         </div>
-        <div>
-            <img src="./img/corte3.png" alt="">
-            <p class="legenda">Legenda 3</p>
-        </div>
-        <div>
-            <img src="./img/corte1.png" alt="">
-            <p class="legenda">Legenda 4</p>
-        </div>
-        <div>
-            <img src="./img/corte2.png" alt="">
-            <p class="legenda">Legenda 5</p>
-        </div>
-        <div>
-            <img src="./img/corte3.png" alt="">
-            <p class="legenda">Legenda 6</p>
-        </div>
-        <div>
-            <img src="./img/corte1.png" alt="">
-            <p class="legenda">Legenda 7</p>
-        </div>
-        <div>
-            <img src="./img/corte2.png" alt="">
-            <p class="legenda">Legenda 8</p>
-        </div>
-        <div>
-            <img src="./img/corte3.png" alt="">
-            <p class="legenda">Legenda 9</p>
-        </div>
-        <div>
-            <img src="./img/corte1.png" alt="">
-            <p class="legenda">Legenda 10</p>
-        </div>
-        <div>
-            <img src="./img/corte2.png" alt="">
-            <p class="legenda">Legenda 11</p>
-        </div>
-        <div>
-            <img src="./img/corte2.png" alt="">
-            <p class="legenda">Legenda 12</p>
-        </div>
-        <div class="anuncio">
-            <img src="./img/1barberMan.png" alt="">
-            <p class="legenda">Legenda anuncio</p>
-        </div>
-    </section>
+    </div>
+        
+    
+    <div class="item rodape" style="color: #04AA6D;">
+        <h2>rodape</h2>
+        <p>Desenvolvido por mim (Dionei R. Lamb) seguindo tutoriais de HTML5 e CSS3.</p>
+    </div>
 </body>
 </html>

@@ -2,13 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Raleway:ital,wght@1,100&display=swap');
 
-/* body, ul, li, p {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,11 +9,12 @@
     max-width: 100%;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
   }
 
 body {
     margin-bottom: 100px;
+    background-color: #1d1e20;
+    color: #04AA6D;
 }
 
 a {
@@ -34,31 +28,30 @@ h1 {
     color : orange;
 	position : relative;
 	top : 150;
-	position: inherit;
+	text-align: center;    
     
-    
-    text-shadow: 0.08em 0.08em 0em rgb(0 0 0 / 40%);
+    text-shadow: 0.08em 0.08em 0em rgba(179, 179, 176, 0.50);
 }
 
 img {
     max-width: 100%;
     display: block;
-    border-radius: 12px 0 12px 0;
+    border-radius: 20px 0 20px 0;
 }
 
 .header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1%;
     align-items: center;
     background-color: #1d1e20;
 }
 
 .header img {
-    background-size: cover;
-    width: 100px;
-    height: 100px;
+    /* background-size: cover; */
+    width: 200px;
+    height: 200px;
 }
 
 .menu {
@@ -113,9 +106,10 @@ img {
     display: block;
 }
 
-@media screen and (max-width: 800px) {
-    .grid1 {
-        grid-template-columns: 1fr 1fr;
+/* @media screen and (max-width: 800px) {
+    .grid1
+     {
+        grid-template-columns: 90%;
         background-color: white;
     }
 
@@ -127,12 +121,13 @@ img {
         display: block;
         background-color: tomato;
     }
+
   }
 
 @media screen and (max-width: 600px) {
     .grid1 {
         grid-template-columns: 1fr;
-        /* background-color: olive; */
+        background-color: olive;
     }
 
     .grid1 > div.anuncio {
@@ -143,4 +138,4 @@ img {
         display: block;
         background-color: tomato;
     }
-  }
+  } */
