@@ -9,12 +9,13 @@
     max-width: 100%;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
+    color: #04AA6D;
 }
 
 body {
-    margin-bottom: 100px;
-    background-color: black;
-    color: #04AA6D;
+    margin-bottom: 5%;
+    background-color: white;
+    
 }
 
 .barraNavegacao {
@@ -72,38 +73,141 @@ body {
         text-align: center;
     }
 
-    .grid-container .topo h1 {
+    .grid-container .topo h1{
         font-size: 5rem;
+        letter-spacing: normal;
         text-align: start;
     }
 
 
 }
 
-/*------------- parte principal------------- */
-.grid-container {
+/* ajeitando seguindo GRID1 */
+.grid1 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: #2196F3;
-}
-.grid-container > div {
-    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 80%;
+    margin: 0 auto;
     gap: 10px;
+    padding: 10px;
+    border: 1px solid #04aa6d;
+    border-radius: 25px;
+  }
+  
+  .grid1 > div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .grid1 > div.anuncio { /* para deixar os 2 no mesmo nível */
+    grid-column: 1;
+    grid-row: 2 / 5; /*começa na linha 2 e vai até a 4 */
+    display: block;
+  }
+  
+  /* colocando uma formatação especial nos filhos marcados */
+  
+  @media only screen and (max-width: 600px) {
+    .grid1 {
+      grid-template-columns: 1fr;
+      max-width:min-content;
+      background-color: white;
+    }
+  
+    .grid1 > div:nth-child(n + 4) {
+      display: block;
+    }
+  
+    .grid1 > div.anuncio {
+      grid-column: auto;
+      grid-row: auto;
+      order: -1;
+    }
+  }
+  
+  /* -------- Inicio Formulário ---------- */
+  .formulario {
+    width: 400px;
+    padding: 30px;
+  }
+  .formulario p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .field {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .field label,
+  .field span {
+    padding-left: 10px;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+  .radiobox label {
+    width: auto;
+    display: inline-block;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  input#nao {
+    margin-left: 30px;
+  }
+  textarea {
+    line-height: 20px;
+    padding: 10px;
+    height: 90px;
+    resize: none;
+  }
+  input[type="submit"] {
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+  }
+  /* -------- Fim Formulário ------------- */
+  
 
-}
+
+
+/*------------- parte principal------------- */
+/* .grid-container {
+    display: grid;
+    grid-template: repeat(5, 1fr);
+} */
+
 .topo {
-    grid-column-start: 1;
-    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
     max-width: 100%;
     justify-content: center;
     padding: 1%;
-    /* align-items: center; */
-    background-color: #1d1e20;
+    background: #333;
+
 }
 
 .topo h1 {
     font-size: 10rem;
     font-family: 'Germania One', cursive;
+    letter-spacing: 1rem;
     color: orange;
     position: relative;
     top: 150;
@@ -117,6 +221,7 @@ body {
     height: 200px;
 }
 
+/*
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -126,15 +231,19 @@ body {
 }
 
 .grid-apresentacao {
-    background-color: aqua;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 150px 20% 1fr; 
+    background-color: #222224; 
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
+    margin: 10px;
     font-size: 1rem;
-    color:#1d1e20;
+    color:white;
     text-align: center
 }
 
-/* .grid-menuLateral{
+ .grid-menuLateral{
     width: 70%;
 	float: right;
     text-align: center;
@@ -164,7 +273,7 @@ body {
 #menu a:hover {
     background: #E5F0FF;
     color: #039;
-} */
+} 
 
 .grid-motivacao {
     background-color: royalblue;
@@ -230,3 +339,4 @@ form label {
     color: #FFFFFF;
     font-weight: bold;
 }
+ */
