@@ -6,21 +6,15 @@
             font-family: 'Roboto', sans-serif;
 
         }
-        body{
-            background-image: url(/img/baguela_eye.jpg);
-            /* background-position: 0px; */
-            background-repeat: no-repeat;
-            background-size: cover; 
-            background-attachment: fixed;
-        }
-        .container{
+
+        .loginClientes{
             display: flex;
             justify-content: center;
             width: 100%;
             margin-top: 100px;
         }
     
-        .card{
+        .areaPrincipal{
             background-color: #ffffff;
             padding: 30px;
             border-radius: 4%;

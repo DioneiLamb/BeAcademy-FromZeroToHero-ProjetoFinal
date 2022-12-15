@@ -5,138 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="./css/style3.css"> -->
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap");
-
-        @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Raleway:ital,wght@1,100&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            max-width: 100%;
-            font-size: 1.2rem;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            margin-bottom: 100px;
-            background-color: #fff;
-            color: #04AA6D;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        h1 {
-            font-size: 10rem;
-            font-family: 'Germania One', cursive;
-            color : orange;
-            position : relative;
-            top : 150;
-            text-align: center;    
-            text-shadow: 0.08em 0.08em 0em rgba(179, 179, 176, 0.50);
-        }
-        .topo {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            padding: 1%;
-            align-items: center;
-            background-color: #1d1e20;
-        }
-
-        .topo img {
-            width: 200px;
-            height: 200px;
-        }
-
-        .menu {
-            display: flex;
-        }
-
-        .menu li {
-            list-style: none;
-            margin-left: 10px;
-        }
-
-        .menu li a {
-            display: block;
-            padding: 10px;
-            background-color: tomato;
-        }
-
-        .menu li a:hover {
-            display: block;
-            padding: 10px;
-            background-color: #04AA6D;
-        }
-
-        /*------------- parte principal------------- */
-        .container{
-            display: grid;
-            max-width: 100%;
-            grid-template-columns:50% 50%;
-            gap: 5px;            
-            
-        }
-        .container > div:nth-child()
-        .apresentacao{ 
-            grid-area: apresentacao;
-            position: relative;
-            background-color: aqua;
-        }
-        .motivacao{
-            grid-area: motivacao;
-            position: absolute;
-            background-color: royalblue;
-        }
-        .testemunho{
-            grid-area: testemunho;
-            position: relative;
-            background-color: olivedrab;
-        }
-        .rodape{
-            grid-area: testemunho;
-            background-color: silver;
-        }
-        .social{
-            grid-area: social;
-            background-color: silver;
-        }
-
-
-
-    </style>
-
+    <link rel="stylesheet" href="./css/mainstyles.css">
+    <link rel="stylesheet" href="./css/style2.css" />
+    <link rel="stylesheet" href="./css/contato.css" />
 </head>
 <body>
-
-    <div class="topo">
-        <img src="/Landpage/img/skull-beard.png" alt="Caveira barbuda" title="Logo Skull Bardearia">            
-        <h1>SKULL Barbearia</h1>
-        <ul class="menu">
-            <li><a href="#">INICIAL</a></li>
-            <li><a href="#">CONTATO</a></li>
-        </ul>
-    </div>
-
-    <div class="container" > <!--container pai-->
-        <div class="item apresentacao" >
-            <h2>apresentação</h2>
+    <div class="grid-container">
+        <div class="topo">
+            <img src="/Landpage/img/skull-beard.png" alt="Caveira barbuda" title="Logo Skull Bardearia">
+            <h1>SKULL Barbearia</h1>
         </div>
-        <div class="item motivacao" >
-            <h2>motivação</h2>
+
+        <div class="grid-apresentacao" id="sobre">grid-apresentação</div>
+        <!-- <div class="grid-menuLateral">
+            <div id="menu">
+                <ul>
+                  <li><a href="link1.htm">link1</a></li>
+                  <li><a href="link2.htm">link2</a></li>
+                  <li><a href="link3.htm">link3</a></li>
+                  <li><a href="link4.htm">link4</a></li>
+                  <li><a href="link5.htm">link5</a></li>
+                </ul>
+              </div>
+        </div> -->
+        <div class="grid-motivacao">grid-motivacao</div>
+        <div class="grid-testemunho">grid-testemunho</div>
+        <div class="grid-contato" id="contato">
+            <h1>
+                Entre em contato conosco por aqui!
+            </h1>
+            <form name="meuFormulario">
+                <input type="text" id="nomeid" placeholder="Seu nome aqui" required="required" name="nome" />
+                <label for="nome"></label>
+              
+                <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+                <label for="fone"></label>
+              
+                <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+                <label for="email"></label>
+              
+                <textarea placeholder="Deixe sua opnião"></textarea>
+              
+                <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+              </form>
         </div>
-    </div>
+        <div class="grid-item">4</div>
+
         
-    
-    <div class="item rodape" style="color: #04AA6D;">
-        <h2>rodape</h2>
-        <p>Desenvolvido por mim (Dionei R. Lamb) seguindo tutoriais de HTML5 e CSS3.</p>
     </div>
+    <div class="barraNavegacao" id="minhaBarraNavegacao">
+        <a href="#" class="active">Inicial</a>
+        <a href="#">Novidades</a>
+        <a href="#contato">Nos chame!</a>
+        <a href="#sobre">Sobre a gente</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+                  
+
+        
+
+
+      
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("minhaBarraNavegacao");
+            if (x.className === "barraNavegacao") {
+                x.className += " responsive";
+                } else { x.className = "barraNavegacao";
+                }
+        }
+
+        function Enviar() {
+            var nome = document.getElementById("nomeid");
+            if (nome.value != "") {
+                alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+            }
+        }
+    </script> 
 </body>
 </html>

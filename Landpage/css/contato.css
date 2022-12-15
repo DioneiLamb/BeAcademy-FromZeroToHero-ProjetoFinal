@@ -1,0 +1,50 @@
+/* contact section */
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Raleway:ital,wght@1,100&display=swap');
+
+.contact_section {
+  padding: 75px 45px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.contact_section .row {
+  align-items: center;
+}
+
+.label-float input{
+  width: 100%;
+  padding:  5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #511b9f;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+button{
+  background-color: transparent;
+  color: #4038a0;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12px;
+  width: 50%;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: #4038a0;
+  color: #fff;
+}
