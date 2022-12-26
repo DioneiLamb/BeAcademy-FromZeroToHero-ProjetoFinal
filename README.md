@@ -12,3 +12,7 @@ Para melhor entendimento, este arquivo está dividido planilhas sendo que elas a
 - Funções,
 - Procs,
 - Tabela dinâmica
+ 
+ Na pasta landingpage há a página construida com HTML e CSS sobre uma barbearia ficticia chamda JB. Esta página tem o intuito de demosntrar de forma prática os conteúdos parendidos nas aulas do professor Luan Monteiro. Não há nenhuma implementação em javascript.
+ 
+ Na pasta denominada Banco de dados hé um exemploe de um banco simples criado e algumas consultas.
